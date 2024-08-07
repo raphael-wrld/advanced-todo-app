@@ -1,19 +1,39 @@
-// src/firebase.js
 import { initializeApp } from 'firebase/app'
-import { getAuth } from 'firebase/auth'
-import { getFirestore } from 'firebase/firestore'
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  deleteDoc,
+  doc,
+  updateDoc,
+  onSnapshot
+} from 'firebase/firestore'
+
+
+
 
 const firebaseConfig = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_AUTH_DOMAIN',
-  projectId: 'YOUR_PROJECT_ID',
-  storageBucket: 'YOUR_STORAGE_BUCKET',
-  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
-  appId: 'YOUR_APP_ID'
+  apiKey: 'AIzaSyA0wjNiItUWWK2_GJ3TJ_JdN7U5 - _6Iugk',
+  authDomain: 'advanced-todo-app-8c108.firebaseapp.com',
+  projectId: 'advanced-todo-app-8c108',
+  storageBucket: 'advanced-todo-app-8c108.appspot.com',
+  messagingSenderId: '411819386387',
+  appId: '1:411819386387:web:395d6a9c082382bbb4c1e6'
 }
 
 const app = initializeApp(firebaseConfig)
-const auth = getAuth(app)
 const firestore = getFirestore(app)
 
-export { auth, firestore }
+export {
+  firestore,
+  collection,
+  addDoc,
+  getDocs,
+  deleteDoc,
+  doc,
+  updateDoc,
+  onSnapshot
+}
+
+
